@@ -4,13 +4,8 @@
              xmlns:local="clr-namespace:XamarinApp"
              x:Class="XamarinApp.MainPage"
              Visual="Default">
-    <!-- issue also occurs with Visual="Material" -->
-
     <StackLayout>
-        
         <FlexLayout Direction="Row" >
-
-            <!-- issue also occurs if Title is empty, but than different behaviour (max size is dropdown menu size) -->
             <Picker Title="Test">
                 <Picker.Items>
                     <x:String>Device A</x:String>
@@ -18,7 +13,14 @@
                     <x:String>Latest Prototype C</x:String>
                 </Picker.Items>
             </Picker>
-            <Entry Placeholder="Serial no" Text="Serial" />
+            <Entry Placeholder="Serial no" Text="Serial">
+                <Entry.Visual>
+                    <!-- TODO: Visual cannot be applied via OnPlatform nowadays -->
+                    <OnPlatform x:TypeArguments="IVisual" Default="Material">
+                        <On Platform="iOS" Value="Default"/>
+                    </OnPlatform>
+                </Entry.Visual>
+            </Entry>
             <Button Text="Add device"/>
         </FlexLayout>
     </StackLayout>
