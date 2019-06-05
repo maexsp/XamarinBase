@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinApp"
+             x:Class="XamarinApp.MainPage"
+             Visual="Default">
+    <!-- issue also occurs with Visual="Material" -->
+
+    <StackLayout>
+        
+        <FlexLayout Direction="Row" >
+
+            <!-- issue also occurs if Title is empty, but than different behaviour (max size is dropdown menu size) -->
+            <Picker Title="Test">
+                <Picker.Items>
+                    <x:String>Device A</x:String>
+                    <x:String>Custom Device B</x:String>
+                    <x:String>Latest Prototype C</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry Placeholder="Serial no" Text="Serial" />
+            <Button Text="Add device"/>
+        </FlexLayout>
+    </StackLayout>
+
+</ContentPage>
