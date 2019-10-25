@@ -2,24 +2,84 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinApp"
-             x:Class="XamarinApp.MainPage"
-             Visual="Default">
-    <!-- issue also occurs with Visual="Material" -->
+             x:Class="XamarinApp.MainPage">
+    
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-    <StackLayout>
-        
-        <FlexLayout Direction="Row" >
+    <StackLayout Margin="20">
 
-            <!-- issue also occurs if Title is empty, but than different behaviour (max size is dropdown menu size) -->
-            <Picker Title="Test">
-                <Picker.Items>
-                    <x:String>Device A</x:String>
-                    <x:String>Custom Device B</x:String>
-                    <x:String>Latest Prototype C</x:String>
-                </Picker.Items>
-            </Picker>
-            <Entry Placeholder="Serial no" Text="Serial" />
-            <Button Text="Add device"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" >
+            <Label Text="Size:" VerticalTextAlignment="Center" />
+            <Label Text="{Binding FontSize}" VerticalTextAlignment="Center" Margin="0,0,20,0"/>
+            <Button Text="+" Command="{Binding IncreaseFontSizeCommand}" />
+            <Button Text="-" Command="{Binding DecreaseFontSizeCommand}" />
+
+            <Label Margin="20,0,0,0" Text="Show border:" VerticalTextAlignment="Center"/>
+            <Switch IsToggled="{Binding IsIconBackgroundOn, Mode=TwoWay}"/>
+        </StackLayout>
+
+
+        <Label Text="Font icons: "/>
+
+        <FlexLayout x:Name="iconsFlexLayout" Direction="Row" Padding="0,10" AlignItems="Stretch" Wrap="Wrap">
+            <FlexLayout.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="Margin" Value="3"/>
+                    <Setter Property="WidthRequest" Value="{Binding FontSize}"/>
+                    <Setter Property="HeightRequest" Value="{Binding FontSize}"/>
+                    <Setter Property="BackgroundColor" Value="Transparent"/>
+                    <Style.Triggers>
+                        <DataTrigger TargetType="Image" Binding="{Binding IsIconBackgroundOn}" Value="True">
+                            <Setter Property="BackgroundColor" Value="SlateGray"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </FlexLayout.Resources>
+
+            <Image>
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf70a;" FontFamily="{DynamicResource MaterialFont}" Color="Black" />
+                </Image.Source>
+            </Image>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf5b1;" FontFamily="{DynamicResource MaterialFont}" Color="Black" />
+                </Image.Source>
+            </Image>       
+            <Image>
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf5b2;" FontFamily="{DynamicResource MaterialFont}" Color="Black" />
+                </Image.Source>
+            </Image>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf5b3;" FontFamily="{DynamicResource MaterialFont}" Color="Black" />
+                </Image.Source>
+            </Image>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf5b4;" FontFamily="{DynamicResource MaterialFont}" Color="Black" />
+                </Image.Source>
+            </Image>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf5b5;" FontFamily="{DynamicResource MaterialFont}" Color="Black" />
+                </Image.Source>
+            </Image>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf5b6;" FontFamily="{DynamicResource MaterialFont}" Color="Black" />
+                </Image.Source>
+            </Image>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf5b7;" FontFamily="{DynamicResource MaterialFont}" Color="Black" />
+                </Image.Source>
+            </Image>
+
+
         </FlexLayout>
     </StackLayout>
 
