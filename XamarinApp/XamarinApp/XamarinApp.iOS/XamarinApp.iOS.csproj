@@ -98,6 +98,12 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="..\XamarinApp\Resources\Fonts\materialdesignicons-webfont.ttf">
+      <Link>Resources\materialdesignicons-webfont.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\XamarinApp\Resources\Fonts\fonticonlibrary.ttf">
+      <Link>Resources\fonticonlibrary.ttf</Link>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
