@@ -3,7 +3,86 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinApp"
              x:Class="XamarinApp.MainPage">
-    
+
+    <ContentPage.Resources>
+        <FontImageSource x:Key="Cog" Glyph="&#xe800;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Wrench" Glyph="&#xe801;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="CogAlt" Glyph="&#xe802;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Gauge" Glyph="&#xe803;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="BookOpen" Glyph="&#xe804;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="BookOpen.White" Glyph="&#xe804;" FontFamily="{DynamicResource CustomFont}" Color="White" />
+        <FontImageSource x:Key="BookOpen.Red" Glyph="&#xe804;" FontFamily="{DynamicResource CustomFont}" Color="Red" />
+        <FontImageSource x:Key="DocAdd" Glyph="&#xe805;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Signal" Glyph="&#xe806;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Signal1" Glyph="&#xe807;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Box" Glyph="&#xe808;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Inbox" Glyph="&#xe809;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="InboxCircled" Glyph="&#xe80a;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Laptop1" Glyph="&#xe80b;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Mobile" Glyph="&#xe80c;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Mouse" Glyph="&#xe80d;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Home" Glyph="&#xe82e;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Home.White" Glyph="&#xe82e;" FontFamily="{DynamicResource CustomFont}" Color="White" />
+        <FontImageSource x:Key="Child" Glyph="&#xe80e;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="UniversalAccess" Glyph="&#xe80f;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="HomeHouse" Glyph="&#xe810;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Play" Glyph="&#xe811;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="ResizeHorizontal" Glyph="&#xe812;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Upload" Glyph="&#xe813;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Download" Glyph="&#xe814;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Attention" Glyph="&#xe815;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="AttentionCicled" Glyph="&#xe816;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="ZoomOut" Glyph="&#xe817;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="ZoomIn" Glyph="&#xe818;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="DownOpen" Glyph="&#xe819;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="LeftOpen" Glyph="&#xe81a;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="LeftOpen.White" Glyph="&#xe81a;" FontFamily="{DynamicResource CustomFont}" Color="White" />
+        <FontImageSource x:Key="RightOpen" Glyph="&#xe81b;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="UpOpen" Glyph="&#xe81c;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Off" Glyph="&#xe81d;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="ListWithDots" Glyph="&#xe81e;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="ListAdd" Glyph="&#xe81f;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Ok" Glyph="&#xe820;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Cancel" Glyph="&#xe821;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="EyeOutline" Glyph="&#xe822;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="OmicronQuoteRight" Glyph="&#xe823;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="ResizeFull" Glyph="&#xe824;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Exchange" Glyph="&#xe825;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="ListWithDots2" Glyph="&#xe826;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Rss" Glyph="&#xe827;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Mail" Glyph="&#xe828;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Intensedabate" Glyph="&#xe829;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Moebius" Glyph="&#xe82a;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Windows" Glyph="&#xe82b;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Android" Glyph="&#xe82c;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="AppleAppStore" Glyph="&#xe82d;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="AlignJustify" Glyph="&#xe82e;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="QrCode" Glyph="&#xe82f;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Spin" Glyph="&#xe838;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Spin.White" Glyph="&#xe838;" FontFamily="{DynamicResource CustomFont}" Color="White" />
+        <FontImageSource x:Key="Move" Glyph="&#xf047;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="BookmarkEmpty" Glyph="&#xf097;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="GaugeFull" Glyph="&#xf0e4;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="GaugeFull.White" Glyph="&#xf0e4;" FontFamily="{DynamicResource CustomFont}" Color="White" />
+        <FontImageSource x:Key="DocText" Glyph="&#xf0f6;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="AngleDoubleDown" Glyph="&#xf103;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Laptop2" Glyph="&#xf109;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="SortNameUp" Glyph="&#xf15d;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="SortNameDown" Glyph="&#xf15e;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Sliders" Glyph="&#xf1de;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Share" Glyph="&#xf1e0;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Plug" Glyph="&#xf1e6;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Yelp" Glyph="&#xf1e9;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="ChartPie" Glyph="&#xf200;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="HourGlas" Glyph="&#xf251;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Commenting" Glyph="&#xf27b;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Usb" Glyph="&#xf287;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="BluetoothFull" Glyph="&#xf293;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="BluetoothThin" Glyph="&#xf294;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="Fire" Glyph="&#xf2c5;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+        <FontImageSource x:Key="SuperPower" Glyph="&#xf2dd;" FontFamily="{DynamicResource CustomFont}" Color="Black" />
+    </ContentPage.Resources>
+
     <ContentPage.BindingContext>
         <local:ViewModel/>
     </ContentPage.BindingContext>
@@ -20,8 +99,7 @@
             <Switch IsToggled="{Binding IsIconBackgroundOn, Mode=TwoWay}"/>
         </StackLayout>
 
-
-        <Label Text="Font icons: "/>
+        <Label Text="Font icons (materialdesignicons-webfont.ttf): "/>
 
         <FlexLayout x:Name="iconsFlexLayout" Direction="Row" Padding="0,10" AlignItems="Stretch" Wrap="Wrap">
             <FlexLayout.Resources>
@@ -79,6 +157,96 @@
                 </Image.Source>
             </Image>
 
+        </FlexLayout>
+
+        <Label Text="Font icons custom font file (Fontello): "/>
+
+        <FlexLayout Direction="Row" Padding="0,10" AlignItems="Stretch" Wrap="Wrap">
+            <FlexLayout.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="Margin" Value="3"/>
+                    <Setter Property="WidthRequest" Value="{Binding FontSize}"/>
+                    <Setter Property="HeightRequest" Value="{Binding FontSize}"/>
+                    <Setter Property="BackgroundColor" Value="Transparent"/>
+                    <Style.Triggers>
+                        <DataTrigger TargetType="Image" Binding="{Binding IsIconBackgroundOn}" Value="True">
+                            <Setter Property="BackgroundColor" Value="SlateGray"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </FlexLayout.Resources>
+
+            <Image Source="{StaticResource Cog}" />
+            <Image Source="{StaticResource Wrench}"/>
+            <Image Source="{StaticResource CogAlt}" />
+            <Image Source="{StaticResource Gauge}"/>
+            <Image Source="{StaticResource BookOpen}"/>
+            <Image Source="{StaticResource DocAdd}" />
+            <Image Source="{StaticResource Signal}" />
+            <Image Source="{StaticResource Signal1}" />
+            <Image Source="{StaticResource Box}"/>
+            <Image Source="{StaticResource Inbox}"/>
+            <Image Source="{StaticResource InboxCircled}"/>
+            <Image Source="{StaticResource Laptop1}"/>
+            <Image Source="{StaticResource Mobile}" />
+            <Image Source="{StaticResource Mouse}"/>
+
+            <Image Source="{StaticResource Home}" />
+            <Image Source="{StaticResource Child}"/>
+            <Image Source="{StaticResource UniversalAccess}"/>
+            <Image Source="{StaticResource HomeHouse}"/>
+            <Image Source="{StaticResource Play}" />
+            <Image Source="{StaticResource ResizeHorizontal}"/>
+            <Image Source="{StaticResource Upload}"/>
+            <Image Source="{StaticResource Download}"/>
+            <Image Source="{StaticResource Attention}"/>
+            <Image Source="{StaticResource AttentionCicled}"/>
+            <Image Source="{StaticResource ZoomOut}"/>
+            <Image Source="{StaticResource ZoomIn}"/>
+            <Image Source="{StaticResource DownOpen}"/>
+            <Image Source="{StaticResource LeftOpen}"/>
+            <Image Source="{StaticResource RightOpen}"/>
+            <Image Source="{StaticResource UpOpen}"/>
+            <Image Source="{StaticResource Off}" />
+            <Image Source="{StaticResource ListWithDots}"/>
+            <Image Source="{StaticResource ListAdd}"/>
+            <Image Source="{StaticResource Ok}"/>
+            <Image Source="{StaticResource Cancel}"/>
+            <Image Source="{StaticResource EyeOutline}"/>
+            <Image Source="{StaticResource OmicronQuoteRight}"/>
+            <Image Source="{StaticResource ResizeFull}"/>
+            <Image Source="{StaticResource Exchange}"/>
+            <Image Source="{StaticResource ListWithDots2}"/>
+            <Image Source="{StaticResource Rss}" />
+            <Image Source="{StaticResource Mail}"/>
+            <Image Source="{StaticResource Intensedabate}"/>
+            <Image Source="{StaticResource Moebius}"/>
+            <Image Source="{StaticResource Windows}"/>
+            <Image Source="{StaticResource Android}"/>
+            <Image Source="{StaticResource AppleAppStore}"/>
+            <Image Source="{StaticResource AlignJustify}"/>
+            <Image Source="{StaticResource QrCode}"/>
+            <Image Source="{StaticResource Spin}"/>
+            <Image Source="{StaticResource Move}"/>
+            <Image Source="{StaticResource BookmarkEmpty}"/>
+            <Image Source="{StaticResource GaugeFull}"/>
+            <Image Source="{StaticResource DocText}"/>
+            <Image Source="{StaticResource AngleDoubleDown}"/>
+            <Image Source="{StaticResource Laptop2}"/>
+            <Image Source="{StaticResource SortNameUp}" />
+            <Image Source="{StaticResource SortNameDown}"/>
+            <Image Source="{StaticResource Sliders}"/>
+            <Image Source="{StaticResource Share}"/>
+            <Image Source="{StaticResource Plug}"/>
+            <Image Source="{StaticResource Yelp}"/>
+            <Image Source="{StaticResource ChartPie}"/>
+            <Image Source="{StaticResource HourGlas}"/>
+            <Image Source="{StaticResource Commenting}"/>
+            <Image Source="{StaticResource Usb}"/>
+            <Image Source="{StaticResource BluetoothFull}"/>
+            <Image Source="{StaticResource BluetoothThin}"/>
+            <Image Source="{StaticResource Fire}"/>
+            <Image Source="{StaticResource SuperPower}"/>
 
         </FlexLayout>
     </StackLayout>

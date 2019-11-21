@@ -5,11 +5,17 @@
     <Application.Resources>
 
         <ResourceDictionary>
+            
             <OnPlatform x:Key="MaterialFont" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Material Design Icons" />
                 <On Platform="Android" Value="materialdesignicons-webfont.ttf#" />
                 <On Platform="UWP" Value="Assets/Fonts/materialdesignicons-webfont.ttf#Material Design Icons" />
-                <!--<On Platform="WPF" Value="/Resources/Fonts/#Material Design Icons" />-->
+            </OnPlatform>
+
+            <OnPlatform x:Key="CustomFont" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="fontellofonticonset" />
+                <On Platform="Android" Value="fonticonlibrary.ttf#" />
+                <On Platform="UWP" Value="Assets/Fonts/fonticonlibrary.ttf#fontellofonticonset" />
             </OnPlatform>
 
         </ResourceDictionary>
