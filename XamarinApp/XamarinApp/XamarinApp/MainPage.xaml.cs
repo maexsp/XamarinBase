@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace XamarinApp
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : MasterDetailPage
     {
         public MainPage()
         {

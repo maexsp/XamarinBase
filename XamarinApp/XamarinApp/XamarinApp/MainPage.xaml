@@ -1,26 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinApp"
-             x:Class="XamarinApp.MainPage"
-             Visual="Default">
-    <!-- issue also occurs with Visual="Material" -->
+             x:Class="XamarinApp.MainPage">
 
-    <StackLayout>
-        
-        <FlexLayout Direction="Row" >
+    <MasterDetailPage.Master>
 
-            <!-- issue also occurs if Title is empty, but than different behaviour (max size is dropdown menu size) -->
-            <Picker Title="Test">
-                <Picker.Items>
-                    <x:String>Device A</x:String>
-                    <x:String>Custom Device B</x:String>
-                    <x:String>Latest Prototype C</x:String>
-                </Picker.Items>
-            </Picker>
-            <Entry Placeholder="Serial no" Text="Serial" />
-            <Button Text="Add device"/>
-        </FlexLayout>
-    </StackLayout>
+        <ContentPage Title="Back" BackgroundColor="LightGray">
+            <StackLayout Orientation="Vertical" Margin="20" Spacing="10">
+                <Button Text="Navigation Btn 1"/>
+                <Button Text="Navigation Btn 2"/>
+                <Button Text="Navigation Btn 3"/>
+            </StackLayout>
+        </ContentPage>
 
-</ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage Title="Nav page">
+            <x:Arguments>
+                <ContentPage BackgroundColor="White">
+                    <StackLayout Margin="20" Spacing="10" Orientation="Vertical">
+                        <Entry Text="Serial number 123456" />
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>
