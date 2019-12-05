@@ -1,3 +1,3 @@
-# Xamarin.Forms: Issue with Selected Entry Text and slide over of MasterDetail-Menu pane -> iOS Selection Thumbs still shown
+# Xamarin.Forms: Issue with Selected Entry Text 
 
-Basic Xamarin.Forms (Android, iOS, UWP) App to test and reproduce issues.
+Issue with Selected Entry Text and slide over of MasterDetail-Menu pane -> iOS Selection Thumbs still shown
